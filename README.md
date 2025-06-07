@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-[🔗 Visit the Live Site](https://your-live-site-url.com)
+[🔗 Visit the Live Site]( https://fardaustaohyd.github.io/goldcard-project/)
 
 ---
 
@@ -54,11 +54,6 @@ GoldCard lets users:
 
 ---
 
-## 📸 Screenshots
-
-![GoldCard Homepage](./assets/screenshot-1.png)
-![Gold Balance Card](./assets/screenshot-2.png)
-
 ---
 
 ## 🔮 Roadmap
@@ -81,12 +76,5 @@ Contributions are welcome! Please fork this repo and create a pull request.
 ## 📚 License
 
 MIT License — free for personal or commercial use.
-
----
-
-## 👋 About the Creator
-
-**Taohyd** – Product Designer & Frontend Developer  
-🔗 [LinkedIn](https://linkedin.com/in/taohyd) | 🌐 [Portfolio](https://your-portfolio.com)
 
 ---
