@@ -1,6 +1,6 @@
-# 🪙 GoldCard – Gold-Backed Digital Debit Card
+# 🪙 METALCard – Gold-Backed Digital Debit Card
 
-**GoldCard** is a concept fintech application that allows users to see and spend their gold holdings like cash — combining the stability of gold with the flexibility of modern digital payments.
+**METALCard** is a concept fintech application that allows users to see and spend their gold holdings like cash — combining the stability of gold with the flexibility of modern digital payments.
 
 ---
 
@@ -21,7 +21,7 @@
 
 ---
 
-## 🧠 What Is GoldCard?
+## 🧠 What Is METALCard?
 
 GoldCard lets users:
 - **View** how much gold they own in grams
