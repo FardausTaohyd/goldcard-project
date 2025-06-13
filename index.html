@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetalCard - Precious Metal-Backed Debit Card</title>
+    <meta name="description" content="MetalCard is the world's first Shariah-compliant debit card backed by real precious metals. Spend your gold and silver instantly with our innovative fintech solution.">
+    <meta name="keywords" content="MetalCard, precious metals, gold, silver, debit card, Shariah-compliant, fintech, Islamic finance">
+    <meta name="author" content="MetalCard Team">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">MetalCard</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-gray-600 hover:text-gold transition-colors">About</a>
+                    <a href="#dashboard" class="text-gray-600 hover:text-gold transition-colors">Dashboard</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-gold transition-colors">How It Works</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gold transition-colors">FAQ</a>
+                </nav>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Spend Your <span class="text-gold">Gold</span> & <span class="text-silver">Silver</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-300">
+                        The world's first Shariah-compliant debit card backed by real precious metals. No interest, no speculation, just pure value.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-gold hover:bg-yellow-600 text-black font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 btn-animate">
+                            Get Started
+                        </button>
+                        <button class="border border-white hover:bg-white hover:text-black font-semibold px-8 py-4 rounded-lg transition-all btn-animate">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1639133694967-640f255f10fc" 
+                        alt="MetalCard" 
+                        class="w-full max-w-md mx-auto rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 gold-shine"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is MetalCard -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">What is MetalCard?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    MetalCard revolutionizes digital payments by backing every transaction with real precious metals. 
+                    Enjoy the convenience of modern fintech while maintaining the security and Islamic compliance of asset-backed currency.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow card-hover">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Real Asset Backing</h3>
+                    <p class="text-gray-600">Every gram in your account represents actual gold or silver stored in secure, audited vaults.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow card-hover">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Shariah Compliant</h3>
+                    <p class="text-gray-600">No interest (riba), no speculation, no uncertainty - fully compliant with Islamic finance principles.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow card-hover">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Instant Spending</h3>
+                    <p class="text-gray-600">Use your virtual or physical card anywhere. Spend your precious metals instantly at current market rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Your Metal Holdings</h2>
+                <div class="flex justify-center space-x-4 mb-8">
+                    <button 
+                        id="goldViewBtn"
+                        onclick="toggleView('gold')"
+                        class="px-6 py-3 rounded-lg font-semibold transition-all bg-gold text-black shadow-lg"
+                    >
+                        Gold View
+                    </button>
+                    <button 
+                        id="silverViewBtn"
+                        onclick="toggleView('silver')"
+                        class="px-6 py-3 rounded-lg font-semibold transition-all bg-gray-200 text-gray-700 hover:bg-gray-300"
+                    >
+                        Silver View
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Gold Holdings -->
+                <div id="goldCard" class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg border-2 border-gold gold-shine">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Gold Holdings</h3>
+                        <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">Au</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-600">Amount</p>
+                            <p class="text-3xl font-bold text-gray-800" id="goldAmount">50.00g</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600">USD Value</p>
+                            <p class="text-3xl font-bold text-green-600" id="goldValue">$3,825.00</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600">Price per gram</p>
+                            <p class="text-lg font-semibold text-gray-700">$76.50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Holdings -->
+                <div id="silverCard" class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg border-2 border-transparent silver-glow">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Silver Holdings</h3>
+                        <div class="w-12 h-12 bg-silver rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">Ag</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-600">Amount</p>
+                            <p class="text-3xl font-bold text-gray-800" id="silverAmount">200.00g</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600">USD Value</p>
+                            <p class="text-3xl font-bold text-green-600" id="silverValue">$170.00</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-600">Price per gram</p>
+                            <p class="text-lg font-semibold text-gray-700">$0.85</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Portfolio Value -->
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl shadow-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">Total Portfolio Value</h3>
+                <p class="text-5xl font-bold" id="totalValue">$3,995.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-time Prices -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Live Metal Prices</h2>
+                <p class="text-xl text-gray-600">Real-time precious metal prices updated every minute</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Gold (XAU)</h3>
+                        <span class="text-green-500 font-semibold">+2.3%</span>
+                    </div>
+                    <p class="text-4xl font-bold text-gold">$76.50/g</p>
+                    <p class="text-gray-600 mt-2">24h Change: +$1.75</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Silver (XAG)</h3>
+                        <span class="text-green-500 font-semibold">+1.8%</span>
+                    </div>
+                    <p class="text-4xl font-bold text-silver">$0.85/g</p>
+                    <p class="text-gray-600 mt-2">24h Change: +$0.015</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spend Metal Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Spend Your Metal</h2>
+                    <p class="text-xl text-gray-600">Convert your precious metals to spend instantly</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <form id="spendForm" onsubmit="handleSpend(event)">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-lg font-semibold mb-2">
+                                Amount to Spend (<span id="currentMetal">Gold</span>)
+                            </label>
+                            <div class="relative">
+                                <input
+                                    type="number"
+                                    step="0.01"
+                                    id="spendAmount"
+                                    oninput="updateSpendValue()"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg form-input"
+                                    placeholder="Enter amount in grams"
+                                />
+                                <span class="absolute right-3 top-3 text-gray-500 font-semibold">grams</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-1">Available: <span id="availableAmount">50.00g</span></p>
+                        </div>
+                        
+                        <div id="spendValue" class="bg-white p-4 rounded-lg mb-6 hidden">
+                            <p class="text-gray-600">USD Value:</p>
+                            <p class="text-2xl font-bold text-green-600" id="spendUsdValue">$0.00</p>
+                        </div>
+                        
+                        <button
+                            type="submit"
+                            id="spendButton"
+                            class="w-full py-4 rounded-lg font-semibold text-lg transition-all bg-gold hover:bg-yellow-600 text-black btn-animate"
+                        >
+                            Spend Gold
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Transaction History</h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full table-hover">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Type</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Amount</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionHistory" class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">Purchase</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-900 font-semibold">10g Gold</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-600">2024-12-15</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">Completed</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">Spend</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-900 font-semibold">5g Silver</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-600">2024-12-14</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">Completed</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">Purchase</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-900 font-semibold">25g Gold</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-600">2024-12-13</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">Completed</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Simple steps to start using your precious metals as everyday currency
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 pulse-gold">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Sign Up</h3>
+                    <p class="text-gray-600">Create your MetalCard account and complete verification</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Buy Metals</h3>
+                    <p class="text-gray-600">Purchase gold or silver backed by real physical assets</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-silver rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Get Your Card</h3>
+                    <p class="text-gray-600">Receive your virtual card instantly, physical card by mail</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Start Spending</h3>
+                    <p class="text-gray-600">Use your card anywhere to spend your precious metals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shariah Compliance -->
+    <section class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Why Shariah-Compliant?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">No Interest (Riba)</h3>
+                                <p class="text-gray-600">Zero interest charges or earnings, complying with Islamic finance principles</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Real Asset Backing</h3>
+                                <p class="text-gray-600">Every transaction is backed by actual physical gold and silver</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">No Speculation</h3>
+                                <p class="text-gray-600">Direct ownership of precious metals eliminates speculation and uncertainty</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1633769572945-936be251644b" 
+                        alt="Gold bars representing asset backing" 
+                        class="w-full rounded-2xl shadow-lg card-hover"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Asset Tokens -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Featured Asset Tokens</h2>
+                <p class="text-xl text-gray-600">Supported precious metal tokens for maximum flexibility</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-yellow-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Gold Tokens</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+                            <div>
+                                <h4 class="font-bold text-gray-800">XAUt (Tether Gold)</h4>
+                                <p class="text-gray-600">Each token backed by 1 troy ounce of gold</p>
+                            </div>
+                            <span class="text-gold font-bold">$2,380</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+                            <div>
+                                <h4 class="font-bold text-gray-800">PAXG (PAX Gold)</h4>
+                                <p class="text-gray-600">London Bullion Market Association certified</p>
+                            </div>
+                            <span class="text-gold font-bold">$2,378</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Silver Tokens</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+                            <div>
+                                <h4 class="font-bold text-gray-800">SLVT (Silver Token)</h4>
+                                <p class="text-gray-600">Physical silver-backed digital asset</p>
+                            </div>
+                            <span class="text-silver font-bold">$26.45</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white rounded-lg">
+                            <div>
+                                <h4 class="font-bold text-gray-800">AGX (Silver Coin)</h4>
+                                <p class="text-gray-600">Backed by 99.9% pure silver bullion</p>
+                            </div>
+                            <span class="text-silver font-bold">$26.40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Get the latest updates on precious metal prices, new features, and Islamic finance insights
+            </p>
+            
+            <form id="newsletterForm" onsubmit="handleNewsletterSignup(event)" class="max-w-md mx-auto">
+                <div class="flex gap-4">
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        placeholder="Enter your email"
+                        class="flex-1 px-4 py-3 rounded-lg text-gray-800 form-input"
+                        required
+                    />
+                    <button
+                        type="submit"
+                        class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-animate"
+                    >
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-4">
+                    <button
+                        onclick="toggleFaq(0)"
+                        class="w-full bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow flex justify-between items-center"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800">How is MetalCard Shariah-compliant?</h3>
+                        <svg 
+                            id="faq-icon-0"
+                            class="w-6 h-6 transform transition-transform"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-answer-0" class="faq-answer bg-white px-6 rounded-lg shadow-md mt-2">
+                        <p class="text-gray-600 py-6">MetalCard is fully Shariah-compliant as it's backed by real physical assets (gold and silver) with no interest (riba), speculation, or uncertainty. Each gram you hold represents actual precious metals in secure vaults.</p>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <button
+                        onclick="toggleFaq(1)"
+                        class="w-full bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow flex justify-between items-center"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800">How do I spend my metal holdings?</h3>
+                        <svg 
+                            id="faq-icon-1"
+                            class="w-6 h-6 transform transition-transform"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-answer-1" class="faq-answer bg-white px-6 rounded-lg shadow-md mt-2">
+                        <p class="text-gray-600 py-6">You can spend your gold and silver holdings using our virtual or physical debit card. The equivalent USD value is calculated in real-time based on current market prices.</p>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <button
+                        onclick="toggleFaq(2)"
+                        class="w-full bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow flex justify-between items-center"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800">Where are the metals stored?</h3>
+                        <svg 
+                            id="faq-icon-2"
+                            class="w-6 h-6 transform transition-transform"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-answer-2" class="faq-answer bg-white px-6 rounded-lg shadow-md mt-2">
+                        <p class="text-gray-600 py-6">All metals are stored in secure, audited vaults with full insurance coverage. You own the actual physical metals, not just certificates.</p>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <button
+                        onclick="toggleFaq(3)"
+                        class="w-full bg-white p-6 rounded-lg shadow-md text-left hover:shadow-lg transition-shadow flex justify-between items-center"
+                    >
+                        <h3 class="text-lg font-semibold text-gray-800">Can I convert between gold and silver?</h3>
+                        <svg 
+                            id="faq-icon-3"
+                            class="w-6 h-6 transform transition-transform"
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-answer-3" class="faq-answer bg-white px-6 rounded-lg shadow-md mt-2">
+                        <p class="text-gray-600 py-6">Yes, you can easily convert between gold and silver holdings through our platform at current market rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">MetalCard</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        The world's first Shariah-compliant precious metal-backed debit card
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Virtual Card</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Physical Card</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile App</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MetalCard. All rights reserved. Built with precision and Islamic principles.@Taohyd</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

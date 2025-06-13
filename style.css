@@ -1,0 +1,270 @@
+
+        /* Custom CSS Variables */
+        :root {
+            --gold: #D4AF37;
+            --silver: #C0C0C0;
+            --gradient-gold: linear-gradient(135deg, #D4AF37, #F4E99B);
+            --gradient-silver: linear-gradient(135deg, #C0C0C0, #E8E8E8);
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Custom Utility Classes */
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .text-silver {
+            color: var(--silver);
+        }
+
+        .bg-gold {
+            background-color: var(--gold);
+        }
+
+        .bg-silver {
+            background-color: var(--silver);
+        }
+
+        .border-gold {
+            border-color: var(--gold);
+        }
+
+        .border-silver {
+            border-color: var(--silver);
+        }
+
+        .hover\:bg-gold:hover {
+            background-color: #B8941F;
+        }
+
+        .hover\:bg-silver:hover {
+            background-color: #A8A8A8;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1), transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.1), transparent 50%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Card Hover Effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Button Animations */
+        .btn-animate {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-animate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-animate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-animate:hover::before {
+            left: 100%;
+        }
+
+        /* Gold Card Shine Effect */
+        .gold-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gold-shine::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .gold-shine:hover::before {
+            animation: shine 1.5s infinite;
+            opacity: 1;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        /* Silver Card Glow Effect */
+        .silver-glow {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .silver-glow:hover {
+            box-shadow: 0 0 30px rgba(192, 192, 192, 0.4);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--gold);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Pulse Animation for Important Elements */
+        .pulse-gold {
+            animation: pulseGold 2s infinite;
+        }
+
+        @keyframes pulseGold {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8941F;
+        }
+
+        /* Table Hover Effects */
+        .table-hover tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f8f9fa;
+            transform: scale(1.01);
+        }
+
+        /* Form Input Focus States */
+        .form-input {
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 80vh;
+                padding: 2rem 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            
+            .card-hover {
+                transform: none;
+            }
+            
+            .card-hover:hover {
+                transform: none;
+            }
+        }
+
+        /* Hide/Show elements based on current view */
+        .gold-view .silver-only {
+            display: none !important;
+        }
+
+        .silver-view .gold-only {
+            display: none !important;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* FAQ Animation */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.open {
+            max-height: 200px;
+        }
+    
